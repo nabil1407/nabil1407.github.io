@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Happy Birthday Boss</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Wendy+One"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      body {
+        font-family: "Wendy One", sans-serif;
+        background-image: url(foto/ayah1.jpg);
+        background-size: cover;
+        background-position: top;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        text-align: center;
+      }
+
+      .balloon {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .balloon > div {
+        width: 100px;
+        height: 140px;
+        border-radius: 80% 80% 80% 80%;
+        padding: 10px;
+
+        transform-origin: bottom center;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: float 2s infinite;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      .balloon > div:nth-child(1) {
+        background: #ff5733; /* Balloon 1 color */
+      }
+      .balloon > div:nth-child(2) {
+        background: #f5a623; /* Balloon 2 color */
+      }
+      .balloon > div:nth-child(3) {
+        background: #e2cb1b; /* Balloon 3 color */
+      }
+      .balloon > div:nth-child(4) {
+        background: #46c35f; /* Balloon 4 color */
+      }
+      .balloon > div:nth-child(5) {
+        background: #3a99f0; /* Balloon 5 color */
+      }
+      .balloon > div:nth-child(6) {
+        background: #e73a9e; /* Balloon 6 color */
+      }
+
+      span {
+        font-size: 4.8em;
+        color: white;
+        text-align: center;
+        display: block;
+        margin-top: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: white;
+        font-size: 3.5em;
+        margin-top: 20px;
+      }
+
+      /* Surat */
+      .envelope {
+        position: relative;
+        cursor: pointer;
+      }
+
+      .envelope .flap {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-top: 40px solid #fff;
+        top: 0;
+        left: 50%;
+        margin-left: -25px;
+        transition: 0.5s;
+      }
+
+      .envelope .content {
+        display: none;
+        background: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .envelope.open .flap {
+        border-top: 0;
+        border-bottom: 40px solid #fff;
+      }
+
+      .envelope.open .content {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="balloon">
+        <div><span>☺</span></div>
+        <div><span>B</span></div>
+        <div><span>D</span></div>
+        <div><span>A</span></div>
+        <div><span>Y</span></div>
+        <div><span>!</span></div>
+      </div>
+      <h1>Pak Bos</h1>
+    </div>
+
+    <!-- Kotak Surat -->
+    <div class="envelope" onclick="openEnvelope(this)">
+      <div class="flap"></div>
+      <div class="content">
+        <p><b>Ulang Tahun Ayah</b></p>
+        <p>
+          Di umur yang ke-54 ini semoga ayah selalu di rahmati dan di lindungi
+          Allah SWT.
+        </p>
+        <p>
+          semoga ayah sehat selalu, di lancarkan rezekinya, di lapangan dadanya
+          🥳
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function openEnvelope(envelope) {
+        envelope.classList.toggle("open");
+      }
+    </script>
+  </body>
+</html>
